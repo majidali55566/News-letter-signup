@@ -1,0 +1,98 @@
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  :root{
+    --clr-primary-hsl-400:4, 100%, 67%;
+    --clr-secondary-hsl-400:235, 18%, 26%;
+    --clr-secondary-hsl-500:234, 29%, 20%;
+    
+    
+    --clr-primary-400:hsl(var(--clr-primary-hsl-400));
+    --clr-secondary-400:hsl(var(--clr-secondary-hsl-400));
+    --clr-secondary-500:hsl(var(--clr-secondary-hsl-500));
+    
+    --clr-neutral-hsl-100:0, 0%, 100%;
+    --clr-neutral-hsl-700:231, 7%, 60%;
+    --clr-neutral-100:hsl(var(--clr-neutral-hsl-100));
+    --clr-neutral-700:hsl(var(--clr-neutral-hsl-700));
+    
+    --gradient-color: hsl(347, 99%, 66%);
+      --clr-primary-gradient: linear-gradient(90deg, rgba(254,84,121,1) 31%, rgba(255,95,89,1) 70%, rgba(254,105,63,1) 100%);
+
+    --gradient:linear-gradient(--first-color,-second-color);
+    
+    --fs-300:.825rem;
+    --fs-400:1rem;
+    --fs-500:1.25rem;
+    --fs-600:1.5rem;
+    --fs-700:1.725rem;
+    --fs-800:2rem;
+
+    --fw-regular:400;
+    --fw-bold:700;
+
+    --font-family-default:'Roboto', sans-serif;
+
+
+  }
+
+  /* General stying */
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: hsl(var(--clr-secondary-hsl-500));
+    
+
+    /* for this project only */
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: var(--clr-secondary-400)
+}
